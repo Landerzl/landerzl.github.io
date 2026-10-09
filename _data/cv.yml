@@ -1,189 +1,144 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Lander Zulueta
+  label: Physicist, quantum sensing
+  email: lander.zulueta@gmail.com
+  location: Leioa, Bizkaia, Spain
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
+  summary: Physics graduate and full-time experimental researcher in quantum sensing at Qubiz.team, building and operating a fiber-based quantum magnetometer (CW-ODMR, pulsed Rabi, T1). Hands-on experience in microwave/RF engineering (waveguide design in HFSS and COMSOL, bench-top NMR), cryogenics and low-temperature STM at CIC nanoGUNE. Bachelor's thesis in quantum metrology.
 
   social_networks:
-    - network: X
-      username: AlbertEinstein
     - network: GitHub
-      username: example
+      username: Landerzl
     - network: LinkedIn
-      username: example
-
-  address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+      username: lander-zulueta
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
+      - institution: University of the Basque Country (EHU)
+        location: Leioa, Spain
+        url: https://www.ehu.eus
         area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
+        studyType: B.Sc.
+        start_date: 2022
+        end_date: 2026
+        score: "9.06/10"
+        courses: "Quantum Mechanics, Thermodynamics, Statistical Mechanics, Electromagnetism, Solid State Physics, Advanced Laboratory Techniques"
         highlights:
-          - Description 1.
-          - Description 2.
-
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
-        highlights:
-          - Description 1.
-          - Description 2.
+          - "Grade: 9.06/10."
+          - "Thesis: Critical Metrology (10/10, Honors)."
 
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - company: Qubiz.team
+        position: Full-Time Researcher, Quantum Sensing
+        location: Bilbao, Spain
+        start_date: 2026-09
+        end_date: present
         highlights:
-          - Relativity
-          - Description 2.
+          - Built and operate a fiber-based optical quantum sensing setup for magnetic field sensing.
+          - Measured CW-ODMR (~1.5% contrast), pulsed Rabi oscillations and T1 relaxation.
+          - Designed and simulated microwave waveguides for hyperpolarization setups with Ansys HFSS and COMSOL RF.
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+      - company: CIC nanoGUNE, Nanoimaging Group
+        position: Research Intern (Supervisor - Prof. Nacho Pascual)
+        location: San Sebastián, Spain
+        start_date: 2026-06
+        end_date: 2026-08
         highlights:
-          - Description 1.
-          - Description 2.
+          - Operated a low-temperature STM (LT-STM), including LHe/LN2 transfers and sub-Kelvin cryostats.
+          - Characterized the transmission function of a cryogenic microwave antenna integrated into the STM junction, laying the RF calibration groundwork for ESR-STM measurements.
+          - Prepared STM tips and Au(111) substrates (UHV annealing, sputtering, MBE) and synthesized graphene nanoribbons by on-surface synthesis, verified by STM topography.
 
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
+      - company: University of the Basque Country (EHU)
+        position: Undergraduate Researcher, Bachelor's Thesis (Supervisors - Iñigo Egusquiza, Jagoba Apellaniz; Ikasiker grant)
+        location: Leioa, Spain
+        start_date: 2025-09
+        end_date: 2026-07
         highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
+          - "Critical Metrology: can quantum metrology gain from operating near a quantum phase transition? Used the superradiant transition of the quantum Rabi model in the classical-oscillator limit, and showed that the precision of parameter estimation diverges at the critical point in the static limit."
+          - Analytic work with Schrieffer-Wolff and bosonic Bogoliubov transformations; numerics with dense diagonalization and numerical differentiation.
+          - "Code: github.com/Landerzl/Critical-Metrology"
 
-    Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
-
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
-
-    Publications:
-      - title: Zur Elektrodynamik bewegter Körper
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
-
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
-
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
-
-    Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Languages:
-      - name: German
-        summary: "Native speaker"
-
-      - name: English
-        summary: "Fluent"
-
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
+      - company: Qubiz.team
+        position: Researcher, Quantum Sensing
+        location: Bilbao, Spain
+        start_date: 2025-06
+        end_date: 2025-12
+        highlights:
+          - Contributed to early-stage projects in biomedicine, automotive and electrical industries, studying quantum sensing devices.
+          - Built RF components of a bench-top NMR device and tested classical machine-learning methods to enhance its signal.
 
     Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
+      - name: BB84 QKD experiment
+        summary: Built an experiment at EHU to exchange messages with the BB84 protocol, including optical alignment and operation of the hardware.
 
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+    Awards:
+      - title: Extraordinary Degree Award in Physics
+        date: 2026
+        awarder: University of the Basque Country (EHU)
+        summary: Best academic record of the 2025-26 cohort.
 
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+      - title: Ikasiker grant
+        date: 2026
+        awarder: Basque Government
+        summary: Competitive grant for the development of the bachelor's thesis.
+
+      - title: Honors in 15 subjects
+        date: 2026
+        awarder: University of the Basque Country (EHU)
+        summary: "2022-2026. Including Bachelor's Thesis, Solid State Physics I & II, Quantum Physics, Nuclear and Particle Physics, Experimental Techniques II, III & IV, Sensors and Actuators, Electromagnetism II, Modern Physics, Vector and Complex Analysis, Algebra I, Chemistry II, Fundamentals of Programming."
+
+      - title: Academic Acceleration
+        date: 2021
+        summary: Skipped one year of secondary school for outstanding academic performance.
+
+    Certificates:
+      - name: Quantum Machine Learning and Quantum Optimization (36h, upcoming)
+        date: 2026-11
+        issuer: University of Deusto
+      - name: Laser Safety Officer (16h)
+        date: 2026-09
+        issuer: ProCareLight
+      - name: Quantum Chemistry with VQE (5h)
+        date: 2026-09
+        issuer: IBM
+      - name: Introduction to Ansys HFSS (2h)
+        date: 2026-09
+        issuer: Ansys
+      - name: Quantum Communication and Quantum Networks (4h)
+        date: 2026-02
+        issuer: TU Braunschweig
+      - name: General Formulation of Quantum Information (10h)
+        date: 2025-11
+        issuer: IBM
+      - name: Fundamentals of Quantum Algorithms (10h)
+        date: 2025-08
+        issuer: IBM
+      - name: Quantum Sensing and Imaging (30h)
+        date: 2025-07
+        issuer: Qureca
+
+    Seminars and Workshops:
+      - bullet: "Hands on Quantum Information (3 ECTS), EHU Quantum Center, Mar. 2026 - present"
+      - bullet: "8th Basque Quantum Science and Technology Workshop / 4th BasQ/IKUR Quantum Science and Technology Workshop, Oct. 2025"
+      - bullet: "Quantum Computing: from Fundamentals to Applications (1 ECTS), BasQ, DIPC, Sep. 2025"
+      - bullet: "Quantum Technologies: Present and Future, Nquire, Jun. 2025"
+
+    Skills:
+      - name: Experimental
+        keywords: "Fiber-based quantum sensing (CW-ODMR, Rabi, T1), microwave/RF delivery, cryogenics, UHV and low-temperature STM"
+      - name: Programming
+        keywords: "Python (QuTiP, scqubits, PySCF, NumPy, SciPy), MATLAB, Wolfram Mathematica, Fortran 90"
+      - name: Simulation and RF
+        keywords: "COMSOL Multiphysics, Ansys HFSS, Qorvo MatchCalc, Smith charts, LAMMPS, Fusion 360, PSpice"
+      - name: Tools
+        keywords: "LaTeX, Git/GitHub, LabVIEW, Linux (WSL)"
+
+    Languages:
+      - name: Basque
+        summary: Native
+      - name: Spanish
+        summary: Native
+      - name: English
+        summary: C1 (Cambridge, Sep. 2025)
+      - name: French
+        summary: Basic

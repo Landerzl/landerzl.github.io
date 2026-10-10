@@ -6,7 +6,7 @@ subtitle: Quantum sensing researcher at <a href='https://qubiz.team'>Qubiz.team<
 
 profile:
   align: right
-  image:
+  image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Leioa, Bizkaia, Spain</p>

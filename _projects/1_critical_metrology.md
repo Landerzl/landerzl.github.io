@@ -2,7 +2,7 @@
 layout: page
 title: Critical Metrology
 description: Quantum Fisher information across the superradiant transition of the quantum Rabi model. Bachelor's thesis, 10/10 with Honors.
-img: assets/img/critical-metrology/card.png
+img: assets/img/cards/critical_metrology.png
 importance: 1
 category: research
 github: https://github.com/Landerzl/Critical-Metrology
@@ -47,7 +47,7 @@ The quantum Rabi model, a single qubit coupled to a single bosonic mode, avoids 
 Using first- and second-order Schrieffer–Wolff effective Hamiltonians, I derived the quantum Fisher information (QFI) for estimating $$\gamma$$ analytically. It diverges at the critical point as $$F_Q \propto (1-\gamma/\gamma_c)^{-2}$$, and exact numerics of the full model (QuTiP) agree with the analytic result.
 
 <div class="row mt-3">
-  <div class="col-sm-7 mx-auto">
+  <div class="col-sm-6 mx-auto">
     {% include figure.liquid loading="eager" path="assets/img/critical-metrology/qfi_normal_combined.png" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>

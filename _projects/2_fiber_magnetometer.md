@@ -2,7 +2,7 @@
 layout: page
 title: NV-center magnetometry
 description: A fiber-based NV-center magnetometer at Qubiz.team, microwave waveguide design in HFSS, and open-system and DFT simulations of NV centers.
-img: assets/img/magnetometer/odmr_oscilloscope.png
+img: assets/img/cards/magnetometer.png
 importance: 3
 category: research
 github: https://github.com/Landerzl/NV-Centers-Code
@@ -26,7 +26,7 @@ github: https://github.com/Landerzl/NV-Centers-Code
 At [Qubiz.team](https://qubiz.team) (Bilbao, Sep. 2026 – present) I build and operate a fiber-based optical quantum sensing setup for magnetic field sensing, based on NV centers in diamond. A green laser excites the NV centers through an optical fiber and the photoluminescence returns through the same fiber. When a microwave field hits the spin resonance near 2.87 GHz, the photoluminescence drops: this is optically detected magnetic resonance (ODMR), and the position of the dip tracks the magnetic field.
 
 <div class="row mt-3">
-  <div class="col-sm-9 mx-auto">
+  <div class="col-sm-8 mx-auto">
     {% include figure.liquid loading="eager" path="assets/img/magnetometer/odmr_oscilloscope.png" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>

@@ -2,7 +2,7 @@
 layout: page
 title: Molecular Architectonics
 description: Nanographene spin chains and ESR-STM at CIC nanoGUNE. On-surface synthesis, STM spectroscopy, and spin-model numerics.
-img: assets/img/nanogune/agnr_platform.png
+img: assets/img/cards/nanogune.png
 importance: 2
 category: research
 github: https://github.com/Landerzl/Numerics-Nanogune
@@ -67,15 +67,21 @@ The ribbons are built on the surface from a small precursor molecule (DBBA) in t
 A 7-AGNR has a non-trivial band topology (Zak phase γ = π), which guarantees a localized state at each open end. On the superconducting substrate, such an end spin shows up as Yu–Shiba–Rusinov (YSR) states: extra peaks inside the superconducting gap, absent on the bare gold.
 
 <div class="row mt-3">
-  <div class="col-sm-9 mt-3 mt-md-0">
+  <div class="col-sm-9 mx-auto">
     {% include figure.liquid loading="eager" path="assets/img/nanogune/ysr.png" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
-  <div class="col-sm-3 mt-3 mt-md-0">
+</div>
+<div class="caption">
+  dI/dV on the bare proximitized gold (black) and at the ribbon end (blue); the in-gap YSR peaks at the end are the fingerprint of the end spin.
+</div>
+
+<div class="row mt-3">
+  <div class="col-sm-6 mx-auto">
     {% include figure.liquid loading="eager" path="assets/img/nanogune/zak_7agnr_bands.png" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
-  Left: dI/dV on the bare proximitized gold (black) and at the ribbon end (blue); the in-gap YSR peaks at the end are the fingerprint of the end spin. Right: tight-binding bands of the periodic 7-AGNR, the origin of the topological end states.
+  Tight-binding bands of the periodic 7-AGNR (Zak phase γ = π), the origin of the topological end states.
 </div>
 
 The two end spins of a ribbon interact. I computed their exchange coupling $$J$$ as a function of ribbon length with a Hubbard-dimer model and with mean-field Hubbard calculations. $$J$$ falls off exponentially with length and drops below the superconducting gap and the thermal energy for the longer ribbons.
@@ -94,7 +100,7 @@ The two end spins of a ribbon interact. I computed their exchange coupling $$J$$
 [3]Triangulene (spin 1) and phenalenyl (spin ½) are each magnetic on their own. Combining them into a phenalenyl–triangulene–phenalenyl (P–T–P) chain gives a mixed ½–1–½ antiferromagnetic spin chain. I modeled it with mean-field Hubbard spin densities and an effective Heisenberg Hamiltonian, solved by exact diagonalization.
 
 <div class="row mt-3">
-  <div class="col-sm-7 mx-auto">
+  <div class="col-sm-8 mx-auto">
     {% include figure.liquid loading="eager" path="assets/img/nanogune/spin_chain_mix.png" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
@@ -149,18 +155,28 @@ The target platform was a naphthalocyanine (Nc) molecule on a bilayer MgO island
 - **MgO.** I grew MgO islands as the decoupling layer.
 
 <div class="row mt-3">
-  <div class="col-sm mt-3 mt-md-0">
+  <div class="col-sm-8 mx-auto">
     {% include figure.liquid loading="eager" path="assets/img/nanogune/rf_transfer_function.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-  </div>
-  <div class="col-sm-3 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/nanogune/nc_on_ag100.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
-  </div>
-  <div class="col-sm-3 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/nanogune/mgo_islands.png" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
-  Left: RF transfer function of the line. Middle: Nc molecules on Ag(100) after flash evaporation. Right: MgO islands.
+  RF transfer function of the line, measured with a VNA.
+</div>
+
+<div class="row mt-3">
+  <div class="col-sm-8 mx-auto">
+    <div class="row">
+      <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/nanogune/nc_on_ag100.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+      </div>
+      <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/nanogune/mgo_islands.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="caption">
+  Left: Nc molecules on Ag(100) after flash evaporation. Right: MgO islands.
 </div>
 
 By the end of the internship the RF line was calibrated; single-spin resonance was still in progress.

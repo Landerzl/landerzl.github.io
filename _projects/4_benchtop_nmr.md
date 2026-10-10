@@ -2,7 +2,7 @@
 layout: page
 title: Bench-top NMR
 description: A home-built NMR spectrometer aimed at portable ¹⁹F detection of PFAS. RF hardware and ML-based signal enhancement.
-img: assets/img/nmr/nmr_block_diagram.png
+img: assets/img/cards/nmr.png
 importance: 4
 category: research
 ---
@@ -33,7 +33,7 @@ PFAS (per- and polyfluoroalkyl substances, the "forever chemicals") are persiste
 
 ## The hardware
 
-I built RF components of a home-built NMR spectrometer. The sample sits in a solenoid coil inside a C-shaped electromagnet, which provides the static field $$B_0$$; the coil applies the oscillating field $$B_1$$ and picks up the signal. A tuning and matching network connects the coil to a Tx/Rx duplexer, which routes the excitation pulses from the RF transceiver to the coil and the received signal to a low-noise preamplifier, followed by digitization and processing. The design also includes a microwave source and waveguide for hyperpolarization (DNP) of the sample.
+I built RF components of a home-built NMR spectrometer. The sample sits in a solenoid coil inside a C-shaped electromagnet, which provides the static field $$B_0$$; the coil applies the oscillating field $$B_1$$ and picks up the signal. A tuning and matching network connects the coil to a Tx/Rx duplexer, which routes the excitation pulses from the RF transceiver to the coil and the received signal to a low-noise preamplifier, followed by digitization and processing. The design also includes a microwave source and waveguide for hyperpolarization (DNP) of the sample. On the processing side, I tested classical machine-learning methods to improve the quality of the NMR signal.
 
 <div class="row mt-3">
   <div class="col-sm mt-3 mt-md-0">
@@ -44,11 +44,7 @@ I built RF components of a home-built NMR spectrometer. The sample sits in a sol
   Block diagram of the spectrometer: magnet and sample coil, tuning and matching network, Tx/Rx duplexer, low-noise preamplifier and RF transceiver, plus the microwave line for hyperpolarization.
 </div>
 
-## Signal processing
-
-I tested classical machine-learning methods to improve the quality of the NMR signal.
-
 ## Related work at Qubiz.team
 
 - Early-stage studies of quantum sensing devices for the biomedical, automotive and electrical industries.
-- NV-centre pressure sensing, which became a follow-on project.
+- NV-center pressure sensing, which became a follow-on project.

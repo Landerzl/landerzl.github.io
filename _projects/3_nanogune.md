@@ -91,24 +91,20 @@ The two end spins of a ribbon interact. I computed their exchange coupling $$J$$
 
 ### A tunable spin chain
 
-[3]Triangulene (spin 1) and phenalenyl (spin ½) are each magnetic on their own. Combining them into a phenalenyl–triangulene–phenalenyl (P–T–P) chain gives a mixed ½–1–½ antiferromagnetic spin chain. I modeled it with mean-field Hubbard spin densities and an effective Heisenberg Hamiltonian,
-
-$$
-H = \sum_m \left[ J_{TP} \left( \mathbf{S}_{4m} \cdot \mathbf{S}_{4m+1} + \mathbf{S}_{4m+2} \cdot \mathbf{S}_{4m+3} \right) + J_T \, \mathbf{S}_{4m+1} \cdot \mathbf{S}_{4m+2} \right] + J_{PP} \sum_m \mathbf{S}_{4m+3} \cdot \mathbf{S}_{4m+4},
-$$
-
-solved by exact diagonalization.
+[3]Triangulene (spin 1) and phenalenyl (spin ½) are each magnetic on their own. Combining them into a phenalenyl–triangulene–phenalenyl (P–T–P) chain gives a mixed ½–1–½ antiferromagnetic spin chain. I modeled it with mean-field Hubbard spin densities and an effective Heisenberg Hamiltonian, solved by exact diagonalization.
 
 <div class="row mt-3">
-  <div class="col-sm-7 mt-3 mt-md-0">
+  <div class="col-sm-7 mx-auto">
     {% include figure.liquid loading="eager" path="assets/img/nanogune/spin_chain_mix.png" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
-  <div class="col-sm-5 mt-3 mt-md-0 d-flex align-items-center">
+</div>
+<div class="row mt-3">
+  <div class="col-sm-10 mx-auto">
     {% include figure.liquid loading="eager" path="assets/img/nanogune/spin_chain_model.png" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
-  Left: mean-field Hubbard spin density of a P–T–P chain. Right: the effective spin model, in which each triangulene locks into a spin-1 unit.
+  Top: triangulene (S = 1) and phenalenyl (S = ½), and the mean-field Hubbard spin density of a P–T–P chain. Bottom: the effective spin model, in which each triangulene locks into a spin-1 unit.
 </div>
 
 The main result: the excitation gap of the chain can be set by design. It is about 22 meV for a single unit and decreases with chain length, extrapolating to Δ ≈ 5.8 meV for an infinite chain.

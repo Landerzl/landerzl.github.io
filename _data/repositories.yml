@@ -1,7 +1,40 @@
-repo_description_lines_max: 2
+# Repositories shown on /repositories/, grouped by theme.
+groups:
+  - title: Bachelor's thesis
+    blurb: Quantum metrology near the superradiant transition of the quantum Rabi model.
+    repos:
+      - name: Critical-Metrology
+        url: https://github.com/Landerzl/Critical-Metrology
+        image: assets/img/repos/critical_metrology.png
+        description: Quantum Fisher information of the quantum Rabi model across the superradiant transition. Schrieffer–Wolff analytics, exact diagonalization, and the scripts behind the figures.
+        tags: [QuTiP, NumPy, SciPy, Jupyter]
+        project: /projects/1_critical_metrology/
 
-github_repos:
-  - Landerzl/Critical-Metrology
-  - Landerzl/NV-Centers-Code
-  - Landerzl/Numerics-Nanogune
-  - Landerzl/Computational-QM
+  - title: NV centers
+    blurb: Simulations behind my NV-center work at Qubiz.team.
+    repos:
+      - name: NV-Centers-Code
+        url: https://github.com/Landerzl/NV-Centers-Code
+        image: assets/img/repos/nv_centers_code.png
+        description: A 7-level Lindblad model of the NV center (CW-ODMR, Ramsey, GSLAC/ESLAC under electric fields) and DFT calculations of the zero-field splitting and its Stark shift.
+        tags: [QuTiP, PySCF]
+        project: /projects/2_fiber_magnetometer/
+
+  - title: Nanographenes
+    blurb: Numerics from my internship at CIC nanoGUNE.
+    repos:
+      - name: Numerics-Nanogune
+        url: https://github.com/Landerzl/Numerics-Nanogune
+        image: assets/img/repos/numerics_nanogune.png
+        description: Exchange coupling and topology (Zak phase) of graphene nanoribbons, and a triangulene–phenalenyl spin chain with mean-field Hubbard, exact diagonalization and simulated STM maps.
+        tags: [sisl, Hubbard, QuTiP]
+        project: /projects/3_nanogune/
+
+  - title: Learning notebooks
+    blurb: Where I try things out.
+    repos:
+      - name: Computational-QM
+        url: https://github.com/Landerzl/Computational-QM
+        image: assets/img/repos/computational_qm.png
+        description: Larmor precession on the Bloch sphere, the quantum harmonic oscillator, QuTiP basics, and quantum optics in Julia.
+        tags: [QuTiP, Julia, Jupyter]

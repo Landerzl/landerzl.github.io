@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Started a research internship in the Nanoimaging Group at CIC nanoGUNE, working with low-temperature STM.
+Started a research internship in the Quantum Probe Microscopy Group at CIC nanoGUNE, working with low-temperature STM.

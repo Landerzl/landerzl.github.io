@@ -6,7 +6,7 @@ importance: 3
 category: research
 ---
 
-Research internship in the Nanoimaging Group at [CIC nanoGUNE](https://www.nanogune.eu) (San Sebastián, Jun. – Aug. 2026), supervised by Prof. Nacho Pascual.
+Research internship in the Quantum Probe Microscopy Group at [CIC nanoGUNE](https://www.nanogune.eu) (San Sebastián, Jun. – Aug. 2026), supervised by Prof. Nacho Pascual.
 
 - Characterized the transmission function of a cryogenic microwave antenna integrated into the STM junction, as RF calibration groundwork for ESR-STM measurements.
 - Operated a low-temperature STM, including LHe/LN<sub>2</sub> transfers and sub-Kelvin cryostats.

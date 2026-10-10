@@ -8,6 +8,15 @@ category: research
 github: https://github.com/Landerzl/Critical-Metrology
 ---
 
+<style>
+  article p,
+  article li,
+  .caption {
+    text-align: justify;
+    hyphens: auto;
+  }
+</style>
+
 <p style="font-size: 1.1rem">
   <a href="{{ '/assets/pdf/critical_metrology_zulueta.pdf' | relative_url }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> <b>Read the manuscript (PDF)</b></a>
   &nbsp;·&nbsp;

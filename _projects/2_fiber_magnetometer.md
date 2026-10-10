@@ -6,6 +6,15 @@ importance: 2
 category: research
 ---
 
+<style>
+  article p,
+  article li,
+  .caption {
+    text-align: justify;
+    hyphens: auto;
+  }
+</style>
+
 At [Qubiz.team](https://qubiz.team) (Bilbao, Sep. 2026 – present) I built and operate a fiber-based optical quantum sensing setup for magnetic field sensing.
 
 - Measured CW-ODMR with about 1.5% contrast.

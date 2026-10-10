@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Leioa, Bizkaia, Spain</p>
+    <p>At the low-temperature STM, CIC nanoGUNE, San Sebastián</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -24,6 +24,15 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
+
+<style>
+  article p,
+  article li,
+  .caption {
+    text-align: justify;
+    hyphens: auto;
+  }
+</style>
 
 I'm a physicist working on experimental quantum sensing. At [Qubiz.team](https://qubiz.team) I build and operate a fiber-based optical quantum magnetometer, running CW-ODMR, pulsed Rabi and $$T_1$$ measurements, and I design microwave waveguides for hyperpolarization setups in Ansys HFSS and COMSOL.
 

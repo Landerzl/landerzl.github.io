@@ -6,6 +6,15 @@ importance: 4
 category: research
 ---
 
+<style>
+  article p,
+  article li,
+  .caption {
+    text-align: justify;
+    hyphens: auto;
+  }
+</style>
+
 At [Qubiz.team](https://qubiz.team) (Bilbao, Jun. – Dec. 2025).
 
 - Built RF components of a bench-top NMR device.

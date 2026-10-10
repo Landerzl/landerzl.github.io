@@ -1,6 +1,11 @@
 # Local overrides of al_folio_core files (based on al_folio_core 1.0.15).
 # _includes/header.liquid: search button shows only the magnifier icon, without the "ctrl k" label.
+# assets/js/theme.js: first-time visitors get light mode instead of the system setting.
 overrides:
   - path: _includes/header.liquid
     gem: al_folio_core
     base_version: 1.0.15
+  - path: assets/js/theme.js
+    gem: al_folio_core
+    base_version: 1.0.15
+    note: default theme is light instead of following the system setting

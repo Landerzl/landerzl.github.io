@@ -1,0 +1,6 @@
+# Local overrides of al_folio_core files (based on al_folio_core 1.0.15).
+# _includes/header.liquid: search button shows only the magnifier icon, without the "ctrl k" label.
+overrides:
+  - path: _includes/header.liquid
+    gem: al_folio_core
+    base_version: 1.0.15

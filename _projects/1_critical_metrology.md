@@ -23,7 +23,7 @@ github: https://github.com/Landerzl/Critical-Metrology
   <a href="https://github.com/Landerzl/Critical-Metrology" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> <b>Code</b></a>
 </p>
 
-**L. Zulueta, I. Egusquiza, J. Apellaniz.** _Critical quantum metrology with the quantum Rabi model: Fisher information across the superradiant transition._ Preprint, 2026.
+**L. Zulueta, J. Apellaniz, I. Egusquiza.** _Critical quantum metrology with the quantum Rabi model: Fisher information across the superradiant transition._ Preprint, 2026.
 
 Bachelor's thesis at the University of the Basque Country (EHU), Sep. 2025 – Jul. 2026, supervised by Iñigo Egusquiza and Jagoba Apellaniz, funded by an Ikasiker grant from the Basque Government. Graded 10/10 with Honors.
 

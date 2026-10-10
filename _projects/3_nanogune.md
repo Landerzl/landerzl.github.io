@@ -2,7 +2,7 @@
 layout: page
 title: Molecular Architectonics
 description: Nanographene spin chains and ESR-STM at CIC nanoGUNE. On-surface synthesis, STM spectroscopy, and spin-model numerics.
-img: assets/img/nanogune/ribbons.png
+img: assets/img/nanogune/agnr_platform.png
 importance: 2
 category: research
 github: https://github.com/Landerzl/Numerics-Nanogune

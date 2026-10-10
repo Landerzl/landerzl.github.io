@@ -1,7 +1,7 @@
 ---
 layout: page
 title: NV-center magnetometry
-description: A fiber-based NV-center magnetometer at Qubiz.team, and open-system and DFT simulations of NV centers.
+description: A fiber-based NV-center magnetometer at Qubiz.team, microwave waveguide design in HFSS, and open-system and DFT simulations of NV centers.
 img: assets/img/magnetometer/odmr.png
 importance: 3
 category: research
@@ -31,12 +31,26 @@ At [Qubiz.team](https://qubiz.team) (Bilbao, Sep. 2026 – present) I build and 
   </div>
 </div>
 <div class="caption">
-  Zero-field CW-ODMR measured with the fiber setup, averaged over up and down frequency sweeps.
+  CW-ODMR measured with the fiber setup and read out on an oscilloscope, at zero field. Well, zero apart from the Earth's ~50 µT, which the NV centers are too polite to ignore.
 </div>
 
-I also design and simulate microwave waveguides for hyperpolarization setups in Ansys HFSS and COMSOL RF.
+## Microwave waveguide design
 
-## Simulations
+I also design and simulate microwave waveguides for hyperpolarization setups in Ansys HFSS and COMSOL RF. The waveguide has to deliver microwaves around 28.5 GHz to a liquid sample flowing through a thin capillary, with a strong magnetic field component at the sample and as little power as possible lost in the bends, where it turns into heat. I iterated on the waveguide geometry, the capillary size and its angle of incidence, comparing the field at the sample and the power absorbed along the way.
+
+<div class="row mt-3">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/hfss/waveguide_hfield.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/hfss/waveguide_bend_capillary.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+  </div>
+</div>
+<div class="caption">
+  Ansys HFSS simulations at 28.5 GHz. Left: magnetic field (H) of the waveguide mode. Right: H-field magnitude in a waveguide bend with the sample capillary running through it.
+</div>
+
+## NV-center simulations
 
 Alongside the experiment, I wrote simulations of NV centers in two directions.
 

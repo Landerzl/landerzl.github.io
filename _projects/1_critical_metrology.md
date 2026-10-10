@@ -8,9 +8,10 @@ category: research
 github: https://github.com/Landerzl/Critical-Metrology
 ---
 
-<p>
-  <a class="btn btn-sm z-depth-0" role="button" href="{{ '/assets/pdf/critical_metrology_zulueta.pdf' | relative_url }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> Manuscript</a>
-  <a class="btn btn-sm z-depth-0" role="button" href="https://github.com/Landerzl/Critical-Metrology" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+<p style="font-size: 1.1rem">
+  <a href="{{ '/assets/pdf/critical_metrology_zulueta.pdf' | relative_url }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> <b>Read the manuscript (PDF)</b></a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/Landerzl/Critical-Metrology" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> <b>Code</b></a>
 </p>
 
 **L. Zulueta, I. Egusquiza, J. Apellaniz.** _Critical quantum metrology with the quantum Rabi model: Fisher information across the superradiant transition._ Preprint, 2026.

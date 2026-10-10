@@ -2,7 +2,7 @@
 layout: page
 title: Fiber-based quantum magnetometer
 description: Building and operating an optical quantum sensing setup for magnetic field sensing. CW-ODMR, pulsed Rabi, T1.
-importance: 2
+importance: 3
 category: research
 ---
 

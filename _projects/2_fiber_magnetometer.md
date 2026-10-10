@@ -2,7 +2,7 @@
 layout: page
 title: NV-center magnetometry
 description: A fiber-based NV-center magnetometer at Qubiz.team, microwave waveguide design in HFSS, and open-system and DFT simulations of NV centers.
-img: assets/img/magnetometer/odmr.png
+img: assets/img/magnetometer/odmr_oscilloscope.png
 importance: 3
 category: research
 github: https://github.com/Landerzl/NV-Centers-Code
@@ -27,7 +27,7 @@ At [Qubiz.team](https://qubiz.team) (Bilbao, Sep. 2026 – present) I build and 
 
 <div class="row mt-3">
   <div class="col-sm-9 mx-auto">
-    {% include figure.liquid loading="eager" path="assets/img/magnetometer/odmr.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    {% include figure.liquid loading="eager" path="assets/img/magnetometer/odmr_oscilloscope.png" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">

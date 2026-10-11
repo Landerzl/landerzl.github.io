@@ -38,3 +38,13 @@ groups:
         image: assets/img/repos/computational_qm.png
         description: Larmor precession on the Bloch sphere, the quantum harmonic oscillator, QuTiP basics, and quantum optics in Julia.
         tags: [QuTiP, Julia, Jupyter]
+
+  - title: Tools
+    blurb: Things I build for myself.
+    repos:
+      - name: focus-up
+        url: https://github.com/Landerzl/focus-up
+        image: assets/img/repos/focus_up.png
+        description: A browser extension and Windows companion for focus sessions: three locked tabs, no notifications, rest breaks, and a calendar of where the time went.
+        tags: [JavaScript, Python, tkinter, Supabase]
+        project: /projects/6_focus_up/

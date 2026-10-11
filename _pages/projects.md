@@ -5,7 +5,7 @@ permalink: /projects/
 description: Research and lab work.
 nav: true
 nav_order: 3
-display_categories: [research]
+display_categories: [research, non-scientific]
 horizontal: false
 ---
 

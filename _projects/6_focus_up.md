@@ -41,7 +41,7 @@ I built Focus Up because I wanted a focus mode that actually holds: three tabs, 
   </div>
 </div>
 <div class="caption">
-  Left: the popup that starts a session. Right: the dashboard with the calendar, stats and the sessions of the selected day (demo data).
+  Left: the popup that starts a session. Right: the dashboard with weekly stats and the calendar heat-map (demo data).
 </div>
 
 ## How it is built

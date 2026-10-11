@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Research and lab work.
+description: Research, lab work, and things I build.
 nav: true
 nav_order: 3
 display_categories: [research, non-scientific]

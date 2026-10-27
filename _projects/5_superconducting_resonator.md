@@ -36,7 +36,7 @@ The chip carries a coplanar-waveguide (CPW) line, shorted to ground at one end a
 
 Superconducting resonators easily reach $$Q \sim 10^5$$, but here a high Q would be a problem. The tip adds a small capacitance to the open end, and the mode's effective capacitance there is only $$C_\mathrm{eff} = 1/(8 f Z_0) \approx 560$$ fF. A change of just **1 fF shifts the resonance by about 4 MHz**, and the tip–pad capacitance changes whenever the tip moves.
 
-With $$Q_L = 1000$$ the linewidth is 4.5 MHz, so the resonance stays usable as the tip moves; with $$Q = 10^5$$ it would be gone. The loaded Q is therefore set on purpose by the coupling ($$Q_c \approx 1090$$). Internal losses only have to be much smaller: the junction itself limits $$Q_i$$ to about $$1.6 \times 10^4$$ (for $$R_J = 1$$ MΩ), and Nb resonators measured on a test chip gave $$Q_i \geq 6 \times 10^4$$.
+With $$Q_L = 1000$$ the linewidth is 4.5 MHz, so the resonance stays usable as the tip moves; with $$Q = 10^5$$ it would be gone. The loaded Q is therefore set on purpose by the coupling ($$Q_c \approx 1090$$). Internal losses only have to be much smaller: the junction itself limits $$Q_i$$ to about $$1.6 \times 10^4$$ (for $$R_J = 1$$ MΩ), and resonators on an earlier Al test chip gave $$Q_i \approx (4\text{–}10) \times 10^4$$.
 
 The coupling is a galvanic tap: the 50 Ω feedline connects directly to the resonator about 100 µm from the short, where the voltage is small. Moving the tap towards the open end strengthens the coupling, as $$Q_c = \frac{\pi}{4} \frac{R_\mathrm{feed}}{Z_0} \Big/ \sin^2\!\left(\frac{\pi x}{2l}\right)$$.
 
@@ -53,7 +53,7 @@ The coupling is a galvanic tap: the 50 Ω feedline connects directly to the reso
 
 In a superconductor the Cooper pairs carry momentum, which adds a **kinetic inductance** $$L_k$$ on top of the magnetic one. I parametrise it by $$\alpha = L_k / L_\mathrm{total}$$. It slows the wave down, so the line resonates below its geometric frequency, roughly as $$f \approx f_\mathrm{geo}\sqrt{1-\alpha}$$.
 
-I re-analysed measurements of an earlier Nb test chip with four λ/4 resonators, measured at 50–100 mK. Three of them sit at 0.913–0.917 of their geometric frequency, which gives **α ≈ 0.16** if the substrate is Si. For the proximitised Au/Nb stack, though, α is not known: across α = 0.05–0.25, the same length lands anywhere between 4.2 and 4.8 GHz (right panel above).
+α depends strongly on the film and on the line width: narrow lines concentrate the current in less metal. On the earlier 100 nm Al test chip, α is estimated at 5–22 % for the 5 µm lines, depending on the penetration depth, which has not been measured yet. For the proximitised Au/Nb stack, α is simply unknown: across α = 0.05–0.25, the same length lands anywhere between 4.2 and 4.8 GHz (right panel above).
 
 ## Chip layout
 

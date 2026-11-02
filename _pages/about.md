@@ -40,4 +40,4 @@ Before that, I spent a summer at [CIC nanoGUNE](https://www.nanogune.eu) in Prof
 
 I did my B.Sc. in Physics at the University of the Basque Country (EHU), 2022–2026, finishing first in my cohort (Extraordinary Degree Award). My bachelor's thesis, on [critical metrology](/projects/1_critical_metrology/), looked at whether parameter estimation can gain precision near a quantum phase transition, using the superradiant transition of the quantum Rabi model.
 
-I'm interested in quantum hardware: superconducting qubits, spin-based sensors, noise characterization, and the microwave engineering that connects them.
+I'm interested in experimental quantum hardware across platforms (spin defects, superconducting circuits, neutral atoms and photonics) for sensing, computing and simulation, and in the tools these platforms share: optics, cryogenics, microwave engineering and noise characterization.

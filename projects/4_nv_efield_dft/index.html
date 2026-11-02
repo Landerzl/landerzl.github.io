@@ -1,0 +1,188 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Electric fields on the NV center | Lander Zulueta </title> <meta name="author" content="Lander Zulueta"> <meta name="description" content="How a DC electric field acts on the NV⁻ center in diamond, from symmetry and finite-field DFT on diamond clusters to a predicted shift of the excited-state anticrossing."> <meta name="keywords" content="quantum sensing, NV centers, quantum metrology, physics, ODMR, STM"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://landerzl.github.io/projects/4_nv_efield_dft/"> <script src="/assets/js/theme.js?v=d7e3a4be97842d61aad2ea1388777adb"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Lander</span> Zulueta </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link"><i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Electric fields on the NV center</h1> <p class="post-description">How a DC electric field acts on the NV⁻ center in diamond, from symmetry and finite-field DFT on diamond clusters to a predicted shift of the excited-state anticrossing.</p> </header> <article> <style>
+  article p,
+  article li,
+  .caption {
+    text-align: justify;
+    hyphens: auto;
+  }
+</style> <p>A numerical project I started in September 2026, at the suggestion of Prof. Jorge Casanova (EHU), following the NV review by <a href="https://doi.org/10.1016/j.physrep.2013.02.001" rel="external nofollow noopener" target="_blank">Doherty <em>et al.</em>, Phys. Rep. 528, 1 (2013)</a>. It is ongoing; the write-up is a working draft.</p> <h2 id="the-question">The question</h2> <p>NV centers are used to sense electric fields through the Stark effect. In the standard room-temperature spin Hamiltonian of the optically excited state ³E, an electric field only multiplies the identity: it shifts the optical line but leaves the spin structure alone. I did not take that for granted. The project asks which field–spin couplings the symmetry of the defect allows, how large they are when computed from first principles, and which measurement could see them.</p> <h2 id="symmetry">Symmetry</h2> <p>Starting from the molecular-orbital picture of the defect (the a₁′, a₁, eₓ, e_y orbitals of the dangling bonds around the vacancy), I worked out which terms coupling the electric field to the spin are allowed by the C₃ᵥ point group and time reversal, in the ground state ³A₂ and in the excited state ³E, to first and second order in the field.</p> <div class="row mt-3"> <div class="col-sm-6 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/nv-efield/orbitals_dft-480.webp 480w,/assets/img/nv-efield/orbitals_dft-800.webp 800w,/assets/img/nv-efield/orbitals_dft-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/nv-efield/orbitals_dft.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> <div class="col-sm-6 mt-3 mt-md-0 d-flex align-items-center"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/nv-efield/levels_scheme-480.webp 480w,/assets/img/nv-efield/levels_scheme-800.webp 800w,/assets/img/nv-efield/levels_scheme-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/nv-efield/levels_scheme.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> </div> <div class="caption"> Left: defect orbitals a₁′, a₁, eₓ and e_y of the NV⁻ center from DFT (C₃₃NH₃₆⁻ cluster, B3LYP). Right: their occupation in the ground state ³A₂ and the excited state ³E. </div> <h2 id="finite-field-dft">Finite-field DFT</h2> <p>I model the NV⁻ center in hydrogen-terminated diamond clusters of increasing size (C₃₃NH₃₆⁻, C₈₅NH₇₆⁻, C₁₆₃NH₁₀₀⁻) with spin-unrestricted DFT in PySCF (PBE and B3LYP). The electric field enters the electronic Hamiltonian as a dipole term, and the self-consistent field is solved with the field already included, so the orbital response is not perturbative. Coefficients come from symmetric finite differences at several field strengths, extrapolated to zero field. Because derivatives of Kohn–Sham levels at fields of ~10⁻⁴ a.u. are sensitive to SCF noise, every point is converged to an orbital gradient below 10⁻⁷, and the sign convention is checked with the Hellmann–Feynman theorem.</p> <div class="row mt-3"> <div class="col-sm-9 mx-auto"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/nv-efield/clusters-480.webp 480w,/assets/img/nv-efield/clusters-800.webp 800w,/assets/img/nv-efield/clusters-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/nv-efield/clusters.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> </div> <div class="caption"> The three diamond clusters around the NV center: nitrogen in amber, the vacancy dashed, its three carbon neighbors in dark gray. </div> <p>A transverse field splits the e pair linearly, as the symmetry analysis predicts, and the induced charge density shows where the response comes from: the size of the coupling is controlled by the polarization between the a₁ and e orbitals inside the defect, which partly screens the applied field.</p> <div class="row mt-3"> <div class="col-sm-9 mx-auto"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/nv-efield/stark_ks-480.webp 480w,/assets/img/nv-efield/stark_ks-800.webp 800w,/assets/img/nv-efield/stark_ks-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/nv-efield/stark_ks.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> </div> <div class="caption"> Shift of the defect Kohn–Sham levels under fields along x, y and z (C₃₃NH₃₆⁻, B3LYP): a transverse field splits the e pair linearly; an axial field shifts e relative to a₁. </div> <div class="row mt-3"> <div class="col-sm-8 mx-auto"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/nv-efield/induced_density-480.webp 480w,/assets/img/nv-efield/induced_density-800.webp 800w,/assets/img/nv-efield/induced_density-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/nv-efield/induced_density.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> </div> <div class="caption"> Charge density induced by a field along z (top) and along x (bottom), in a symmetry plane and in the plane of the three carbon atoms. </div> <h2 id="the-excited-state">The excited state</h2> <p>For ³E, I build each orbital component with ΔSCF, keeping the excited configuration with the initial maximum overlap method (IMOM). The vertical excitation energy comes out at 1.88 eV, inside the range of earlier DFT calculations, and the excitation stays localized on the defect. On top of that I compute the spin–spin zero-field splitting from the spin density, the Jahn–Teller relaxation of the excited state, the ionic contribution to the field coupling, and the second-order terms in the field.</p> <div class="row mt-3"> <div class="col-sm-9 mx-auto"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/nv-efield/stark_es-480.webp 480w,/assets/img/nv-efield/stark_es-800.webp 800w,/assets/img/nv-efield/stark_es-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/nv-efield/stark_es.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> </div> <div class="caption"> ΔSCF energies of the two ³E components under transverse and axial fields, and the ³E–³A₂ transition energy compared with the Hellmann–Feynman slope. </div> <h2 id="from-numbers-to-a-measurement">From numbers to a measurement</h2> <p>The computed couplings feed a Lindblad model of the NV center at room temperature, including the excited-state level anticrossing (ESLAC) and nuclear spin polarization. The prediction: an axial electric field shifts the ESLAC by about 3.3 G per MV/cm. That is small but measurable with polarity modulation of the field and lock-in detection, using the ground-state Stark shift as an in-situ calibration and the GSLAC, which barely moves, as a control.</p> <div class="row mt-3"> <div class="col-sm-8 mx-auto"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/nv-efield/eslac_shift-480.webp 480w,/assets/img/nv-efield/eslac_shift-800.webp 800w,/assets/img/nv-efield/eslac_shift-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/nv-efield/eslac_shift.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> </div> <div class="caption"> Predicted effect of an axial electric field on the ESLAC: (a) the photoluminescence dip, (b) the differential signal under polarity reversal, (c) the shift of the dip against the field, (d) an ensemble with both NV polarities, where the effect cancels. </div> <h2 id="tools">Tools</h2> <p>Python with PySCF (UKS, ΔSCF/IMOM, zero-field-splitting tensors), geomeTRIC for relaxations, QuTiP for the Lindblad dynamics, and pytest for the numerical checks. The report is written in LaTeX.</p> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Lander Zulueta. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-publications",
+          title: "publications",
+          description: "Code and manuscripts are linked from each entry.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-projects",
+          title: "projects",
+          description: "Research, lab work, and things I build.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-repositories",
+          title: "repositories",
+          description: "Code on GitHub, grouped by topic.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/repositories/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
+        
+          title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/", "_blank");
+          
+        },
+      },{id: "post-displaying-external-posts-on-your-al-folio-blog",
+        
+          title: 'Displaying External Posts on Your al-folio Blog <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
+          
+        },
+      },{id: "news-started-as-a-researcher-in-quantum-sensing-at-qubiz-team",
+          title: 'Started as a researcher in quantum sensing at Qubiz.team.',
+          description: "",
+          section: "News",},{id: "news-started-a-research-internship-in-the-quantum-probe-microscopy-group-at-cic-nanogune-working-with-low-temperature-stm",
+          title: 'Started a research internship in the Quantum Probe Microscopy Group at CIC nanoGUNE,...',
+          description: "",
+          section: "News",},{id: "news-finished-my-bachelor-s-thesis-critical-metrology-10-10-honors-code-on-github",
+          title: 'Finished my bachelor’s thesis, Critical Metrology (10/10, Honors). Code on GitHub.',
+          description: "",
+          section: "News",},{id: "news-joined-qubiz-team-full-time-as-a-quantum-sensing-researcher",
+          title: 'Joined Qubiz.team full-time as a quantum sensing researcher.',
+          description: "",
+          section: "News",},{id: "news-the-manuscript-from-my-bachelor-s-thesis-is-online-critical-quantum-metrology-with-the-quantum-rabi-model",
+          title: 'The manuscript from my bachelor’s thesis is online: Critical quantum metrology with the...',
+          description: "",
+          section: "News",},{id: "projects-critical-metrology",
+          title: 'Critical Metrology',
+          description: "Quantum Fisher information across the superradiant transition of the quantum Rabi model. Bachelor&#39;s thesis, 10/10 with Honors.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_critical_metrology/";
+            },},{id: "projects-nv-center-magnetometry",
+          title: 'NV-center magnetometry',
+          description: "A fiber-based NV-center magnetometer at Qubiz.team, microwave waveguide design in HFSS, and open-system and DFT simulations of NV centers.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_fiber_magnetometer/";
+            },},{id: "projects-molecular-architectonics",
+          title: 'Molecular Architectonics',
+          description: "Nanographene spin chains and ESR-STM at CIC nanoGUNE. On-surface synthesis, STM spectroscopy, and spin-model numerics.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_nanogune/";
+            },},{id: "projects-bench-top-nmr",
+          title: 'Bench-top NMR',
+          description: "A home-built NMR spectrometer aimed at portable ¹⁹F detection of PFAS. RF hardware and ML-based signal enhancement.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_benchtop_nmr/";
+            },},{id: "projects-electric-fields-on-the-nv-center",
+          title: 'Electric fields on the NV center',
+          description: "How a DC electric field acts on the NV⁻ center in diamond, from symmetry and finite-field DFT on diamond clusters to a predicted shift of the excited-state anticrossing.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_nv_efield_dft/";
+            },},{id: "projects-superconducting-resonator-for-stm",
+          title: 'Superconducting resonator for STM',
+          description: "Designing a superconducting λ/4 microwave resonator that is itself the sample of an ESR-STM, with Prof. Nacho Pascual&#39;s group. Work in progress.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/5_superconducting_resonator/";
+            },},{id: "projects-focus-up",
+          title: 'Focus Up',
+          description: "A browser extension and Windows companion for distraction-free work sessions, with a session timer, rest breaks and a calendar.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/6_focus_up/";
+            },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/CV_Lander_Zulueta.pdf", "_blank");
+        },
+      },{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%6C%61%6E%64%65%72.%7A%75%6C%75%65%74%61@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/Landerzl", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/lander-zulueta", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>

@@ -2,7 +2,7 @@
 layout: page
 title: Electric fields on the NV center
 description: How a DC electric field acts on the NV⁻ center in diamond, from symmetry and finite-field DFT on diamond clusters to a predicted shift of the excited-state anticrossing.
-img: assets/img/cards/nv_efield.png
+img: assets/img/cards/nv_efield_en.png
 importance: 4
 category: research
 ---
@@ -30,10 +30,10 @@ Starting from the molecular-orbital picture of the defect (the a₁′, a₁, e�
   <div class="col-sm-9 mx-auto">
     <div class="row">
       <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/nv-efield/orbitals_dft.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid loading="eager" path="assets/img/nv-efield/orbitals_dft_en.png" class="img-fluid rounded z-depth-1" zoomable=true %}
       </div>
       <div class="col-sm mt-3 mt-md-0 d-flex align-items-center">
-        {% include figure.liquid loading="eager" path="assets/img/nv-efield/levels_scheme.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid loading="eager" path="assets/img/nv-efield/levels_scheme_en.png" class="img-fluid rounded z-depth-1" zoomable=true %}
       </div>
     </div>
   </div>
@@ -48,7 +48,7 @@ I model the NV⁻ center in hydrogen-terminated diamond clusters of increasing s
 
 <div class="row mt-3">
   <div class="col-sm-9 mx-auto">
-    {% include figure.liquid loading="eager" path="assets/img/nv-efield/clusters.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    {% include figure.liquid loading="eager" path="assets/img/nv-efield/clusters_en.png" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
@@ -59,7 +59,7 @@ A transverse field splits the e pair linearly, as the symmetry analysis predicts
 
 <div class="row mt-3">
   <div class="col-sm-9 mx-auto">
-    {% include figure.liquid loading="eager" path="assets/img/nv-efield/stark_ks.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    {% include figure.liquid loading="eager" path="assets/img/nv-efield/stark_ks_en.png" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
@@ -68,7 +68,7 @@ A transverse field splits the e pair linearly, as the symmetry analysis predicts
 
 <div class="row mt-3">
   <div class="col-sm-6 mx-auto">
-    {% include figure.liquid loading="eager" path="assets/img/nv-efield/induced_density.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    {% include figure.liquid loading="eager" path="assets/img/nv-efield/induced_density_en.png" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
@@ -81,7 +81,7 @@ For ³E, I build each orbital component with ΔSCF, keeping the excited configur
 
 <div class="row mt-3">
   <div class="col-sm-9 mx-auto">
-    {% include figure.liquid loading="eager" path="assets/img/nv-efield/stark_es.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    {% include figure.liquid loading="eager" path="assets/img/nv-efield/stark_es_en.png" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
@@ -94,7 +94,7 @@ The computed couplings feed a Lindblad model of the NV center at room temperatur
 
 <div class="row mt-3">
   <div class="col-sm-8 mx-auto">
-    {% include figure.liquid loading="eager" path="assets/img/nv-efield/eslac_shift.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    {% include figure.liquid loading="eager" path="assets/img/nv-efield/eslac_shift_en.png" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">

@@ -27,11 +27,15 @@ NV centers are used to sense electric fields through the Stark effect. In the st
 Starting from the molecular-orbital picture of the defect (the a₁′, a₁, eₓ, e_y orbitals of the dangling bonds around the vacancy), I worked out which terms coupling the electric field to the spin are allowed by the C₃ᵥ point group and time reversal, in the ground state ³A₂ and in the excited state ³E, to first and second order in the field.
 
 <div class="row mt-3">
-  <div class="col-sm-6 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/nv-efield/orbitals_dft.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-  </div>
-  <div class="col-sm-6 mt-3 mt-md-0 d-flex align-items-center">
-    {% include figure.liquid loading="eager" path="assets/img/nv-efield/levels_scheme.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+  <div class="col-sm-9 mx-auto">
+    <div class="row">
+      <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/nv-efield/orbitals_dft.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+      </div>
+      <div class="col-sm mt-3 mt-md-0 d-flex align-items-center">
+        {% include figure.liquid loading="eager" path="assets/img/nv-efield/levels_scheme.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+      </div>
+    </div>
   </div>
 </div>
 <div class="caption">
@@ -63,7 +67,7 @@ A transverse field splits the e pair linearly, as the symmetry analysis predicts
 </div>
 
 <div class="row mt-3">
-  <div class="col-sm-8 mx-auto">
+  <div class="col-sm-6 mx-auto">
     {% include figure.liquid loading="eager" path="assets/img/nv-efield/induced_density.png" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>

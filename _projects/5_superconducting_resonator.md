@@ -3,7 +3,7 @@ layout: page
 title: Superconducting resonator for STM
 description: Designing a superconducting λ/4 microwave resonator that is itself the sample of an ESR-STM, with Prof. Nacho Pascual's group. Work in progress.
 img: assets/img/cards/resonator.png
-importance: 5
+importance: 6
 category: research
 ---
 

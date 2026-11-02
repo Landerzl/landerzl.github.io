@@ -68,6 +68,6 @@ Alongside the experiment, I wrote simulations of NV centers in two directions.
   Simulations with the 7-level model. Left: CW-ODMR spectrum under a bias magnetic field, with the two spin transitions split. Right: photoluminescence versus magnetic field across the ESLAC region for several axial electric fields; the GSLAC position (dashed) does not move.
 </div>
 
-**Quantum chemistry (PySCF).** DFT calculations on diamond clusters containing NV centers (with and without hydrogen passivation, single and pairs of NVs) to compute the zero-field splitting parameters D and E, their Stark shift under an applied electric field, the excited state, and the molecular orbitals.
+**Quantum chemistry (PySCF).** DFT calculations on diamond clusters containing NV centers (with and without hydrogen passivation, single and pairs of NVs) to compute the zero-field splitting parameters D and E, their Stark shift under an applied electric field, the excited state, and the molecular orbitals. This grew into a larger study of the DC Stark effect, including the excited state: see [Electric fields on the NV center](/projects/4_nv_efield_dft/).
 
 Code: [github.com/Landerzl/NV-Centers-Code](https://github.com/Landerzl/NV-Centers-Code)

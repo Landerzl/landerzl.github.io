@@ -3,7 +3,7 @@ layout: page
 title: Bench-top NMR
 description: A home-built NMR spectrometer aimed at portable ¹⁹F detection of PFAS. RF hardware and ML-based signal enhancement.
 img: assets/img/cards/nmr.png
-importance: 4
+importance: 5
 category: research
 ---
 

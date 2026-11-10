@@ -73,9 +73,48 @@ Because of that uncertainty, the first chip carries **four resonators, each desi
 - **Vortex pinning.** At 161 mT a field perpendicular to the film lets vortices into the superconductor, and moving vortices dissipate RF power. The ground plane is perforated with about 300 000 holes (5 µm, on a 10 µm pitch) that trap the vortices away from the CPW. Holes are kept out of the gaps and the pads.
 - **Parametric.** The layout is generated in Python from the analytical model (gdstk to write it, KLayout to check it), so every length and tap position follows from the design parameters and the chip can be regenerated once α and the pad capacitance are known.
 
+## First electromagnetic simulations (COMSOL)
+
+Before simulating my own chip, I checked the simulation method on two resonators from the group's next Al-on-Si test chip: one coupled capacitively to the feedline (open end next to it) and one coupled inductively (shorted end next to it). Both were designed with an analytical 2D model for $$Q_c = 2 \times 10^4$$, so the question was whether a full 3D simulation agrees.
+
+**The model.** A 3D eigenfrequency study in COMSOL (RF Module). The metal is a 2D perfect-conductor sheet on silicon ($$\varepsilon_r = 11.45$$) with air above, inside a closed box, and the feedline ends in a 50 Ω lumped port. The meander is replaced by straight sections of the same length. With lossless metal and substrate, the only way energy can leave the resonator is through the port, so the quality factor of the complex eigenfrequency, $$Q = f'/(2f'')$$, is directly $$Q_c$$. Kinetic inductance is added afterwards as $$f = f_\mathrm{PEC}\sqrt{1-\alpha}$$.
+
+**The mesh is the hard part.** The field sits in gaps a few µm wide along a line several mm long. My first run, with coarse layers above and below the metal, put the resonance 50 % too high: the mesh could not resolve the field in the gaps, so the line's capacitance came out too small. With thin layers at the metal plane (first layer about 1 µm) the resonance moved to the expected place. Refining further, from one to two elements across each gap, lowered $$f$$ by 2.5 % and changed $$Q_c$$ by only 2 %.
+
+<div class="row mt-3">
+  <div class="col-sm-12 mx-auto">
+    {% include figure.liquid loading="eager" path="assets/img/resonator/comsol_geometry_ind.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+  </div>
+</div>
+<div class="caption">
+  Simplified geometry of the inductively coupled resonator. Left: the full model, with the 50 Ω port at x = 0. Right: the coupling region, where the resonator's shorted end runs parallel to the feedline for 262 µm.
+</div>
+
+| Coupling | $$f_\mathrm{PEC}$$, 3D | $$f_\mathrm{PEC}$$, analytical | $$Q_c$$, 3D | $$Q_c$$, design |
+| --- | --- | --- | --- | --- |
+| Capacitive | 5.434 GHz | 5.33 GHz | $$2.2 \times 10^4$$ | $$2.0 \times 10^4$$ (+10 %) |
+| Inductive | 5.247 GHz | 5.15 GHz | $$1.37 \times 10^4$$ | $$2.0 \times 10^4$$ (−32 %) |
+
+- **Frequency.** Both come out about 2 % above the analytical value, consistent with the remaining mesh error.
+- **Capacitive coupling** agrees with the 2D model within its expected accuracy.
+- **Inductive coupling** is stronger than designed, equivalent to a mutual inductance of about 12.5 pH instead of 10.3 pH. The likely reason is that the resonator's short sits right next to the feedline: its current returns through the 5 µm ground strip between the two lines and adds magnetic coupling that the 2D model leaves out. The simplified geometry matters most exactly there, so this is worth repeating with the real layout.
+
+To make sure the right mode is the resonator, I looked at the field of each eigenmode. Only one has a high Q, and its field is concentrated along the resonator, strongest at the open end; the next mode up is the feedline itself resonating, damped in less than a cycle by the port.
+
+<div class="row mt-3">
+  <div class="col-sm-12 mx-auto">
+    {% include figure.liquid loading="eager" path="assets/img/resonator/comsol_modes_ind.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+  </div>
+</div>
+<div class="caption">
+  Electric field (log scale) in the metal plane for two eigenmodes of the inductively coupled model. Left: the resonator mode, maximal at the open end and vanishing at the short. Right: a feedline mode, with the resonator dark.
+</div>
+
+For my own chip this matters directly: the galvanic tap near the short is closer to the inductive case, where the 2D model underestimated the coupling.
+
 ## Next steps
 
-- **Electromagnetic simulation.** Finite-element simulations (COMSOL) of the pad capacitance, the tip–pad capacitance and the 3D modes of the chip inside the sample holder, to replace the assumed values in the model.
+- **Simulate my chip.** Run the same eigenfrequency model on the Au/Nb layout to get $$f$$ and $$Q_c$$ of each tapped resonator, and electrostatic simulations of the pad and tip–pad capacitance, to replace the assumed values in the analytical model.
 - **Practical constraints.** Fix the substrate and the Au/Nb thicknesses with fabrication, check how many RF lines the sample holder allows, and settle the field orientation (in-plane is much safer for the superconductor).
 
 _To be continued._
